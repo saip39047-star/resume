@@ -3,196 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shazia Sirdeshmukh - Resume</title>
+    <title>Shazia Sirdeshmukh - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            display: flex;
-            justify-content: center;
-            padding: 40px 0;
-        }
-        .a4-page {
-            width: 210mm;
-            min-height: 297mm;
-            background-color: white;
-            display: flex;
-            box-shadow: 0 0 30px rgba(0,0,0,0.15);
-            position: relative;
-        }
-        .sidebar {
-            width: 35%;
-            background-color: #e5e7eb !important;
-            padding: 50px 35px;
-        }
-        .main-content {
-            width: 65%;
-            background-color: white !important;
-            padding: 60px 50px;
-            position: relative;
-        }
-        /* Vertical Line */
-        .timeline-line {
-            position: absolute;
-            left: 50px;
-            top: 240px;
-            bottom: 60px;
-            width: 2px;
-            background-color: #94a3b8;
-        }
-        .node {
-            position: absolute;
-            left: -8px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: #475569;
-            border: 3px solid white;
-        }
-        .photo-frame {
-            width: 200px;
-            height: 260px;
-            border: 10px solid #0f172a;
-            border-radius: 40px;
-            overflow: hidden;
-            margin: 0 auto 40px auto;
-        }
-        .section-title {
-            font-size: 18pt;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #94a3b8;
-            letter-spacing: 0.15em;
-            margin-bottom: 25px;
-        }
-        h1 { font-size: 44pt; font-weight: 900; line-height: 1; margin-bottom: 15px; color: #0f172a; }
-        .subhead { font-size: 16pt; font-weight: 500; color: #1e293b; line-height: 1.2; margin-bottom: 30px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        body { font-family: 'Inter', sans-serif; background-color: #cbd5e1; display: flex; justify-content: center; padding: 40px 0; }
+        .a4-page { width: 210mm; min-height: 297mm; background-color: white; display: flex; position: relative; box-shadow: 0 0 50px rgba(0,0,0,0.2); }
+        .sidebar { width: 35%; background-color: #e5e7eb !important; padding: 50px 35px; display: flex; flex-direction: column; }
+        .main-content { width: 65%; background-color: white !important; padding: 60px 45px; position: relative; }
+        .timeline-line { position: absolute; left: 45px; top: 235px; bottom: 80px; width: 2px; background-color: #cbd5e1; }
+        .node { position: absolute; left: -7px; width: 12px; height: 12px; border-radius: 50%; background-color: #475569; border: 2.5px solid white; }
+        .photo-frame { width: 210px; height: 280px; border: 10px solid #0f172a; border-radius: 50px; overflow: hidden; margin: 0 auto 40px auto; background: #94a3b8; }
+        .section-title { font-size: 16pt; font-weight: 900; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.2em; margin-bottom: 25px; }
+        h1 { font-size: 42pt; font-weight: 900; line-height: 1; margin-bottom: 15px; color: #0f172a; }
+        .subhead { font-size: 15pt; font-weight: 500; color: #1e293b; line-height: 1.2; margin-bottom: 35px; }
         p, li { font-size: 10.5pt; line-height: 1.5; color: #1e293b; font-weight: 500; }
-        .expertise-title { font-size: 11.5pt; font-weight: 900; color: #0f172a; margin-bottom: 4px; }
-        .expertise-desc { font-size: 10pt; color: #475569; margin-bottom: 18px; line-height: 1.4; }
-        hr { border: none; border-top: 1.5px solid #cbd5e1; margin: 25px 0; }
-        .no-print { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 100; }
-        
-        @media print {
-            @page { size: A4 portrait; margin: 0; }
-            body { padding: 0; background: none; }
-            .a4-page { box-shadow: none; margin: 0; width: 210mm; min-height: 297mm; }
-            .no-print { display: none !important; }
-        }
+        .expertise-title { font-size: 12pt; font-weight: 800; color: #0f172a; margin-bottom: 2px; }
+        .expertise-desc { font-size: 10pt; color: #334155; margin-bottom: 18px; line-height: 1.4; }
+        hr { border: none; border-top: 1.5px solid #cbd5e1; margin: 30px 0; }
+        .no-print { position: fixed; top: 20px; right: 20px; z-index: 100; }
+        @media print { @page { size: A4 portrait; margin: 0; } body { padding: 0; background: none; } .a4-page { box-shadow: none; margin: 0; } .no-print { display: none !important; } }
     </style>
 </head>
 <body>
-
     <div class="no-print">
-        <button onclick="window.print()" style="background: #0f172a; color: white; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-            PRINT TO PDF
-        </button>
+        <button onclick="window.print()" style="background: #0f172a; color: white; padding: 14px 28px; border-radius: 12px; font-weight: 800; cursor: pointer; border: none;">SAVE AS PDF</button>
     </div>
-
     <div class="a4-page">
-        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="photo-frame">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" style="width:100%; height:100%; object-fit:cover;" alt="Shazia">
             </div>
-
             <div style="margin-bottom: 40px;">
-                <h2 style="font-size: 20pt; font-weight: 900; text-transform: uppercase;">Contact</h2>
-                <hr style="border-top-color: #94a3b8;">
-                <div style="margin-top: 20px;">
-                    <p style="font-weight: 900; font-size: 9pt; text-transform: uppercase;">Phone</p>
+                <h2 style="font-size: 24pt; font-weight: 800;">Contact</h2>
+                <hr style="border-top-color: #94a3b8; margin: 10px 0 20px 0;">
+                <div style="margin-bottom: 15px;">
+                    <p style="font-weight: 800; font-size: 9pt; text-transform: uppercase;">Phone</p>
                     <p>+91 9650388135</p>
                 </div>
-                <div style="margin-top: 15px;">
-                    <p style="font-weight: 900; font-size: 9pt; text-transform: uppercase;">Email</p>
-                    <p style="font-size: 9pt;">shaziasirdeshmukh@gmail.com</p>
+                <div style="margin-bottom: 15px;">
+                    <p style="font-weight: 800; font-size: 9pt; text-transform: uppercase;">Email</p>
+                    <p style="font-size: 9.5pt;">shaziasirdeshmukh@gmail.com</p>
                 </div>
-                <div style="margin-top: 15px;">
-                    <p style="font-weight: 900; font-size: 9pt; text-transform: uppercase;">Address</p>
+                <div>
+                    <p style="font-weight: 800; font-size: 9pt; text-transform: uppercase;">Address</p>
                     <p>Delhi</p>
                 </div>
             </div>
-
             <div style="margin-bottom: 40px;">
-                <h2 style="font-size: 14pt; font-weight: 900; margin-bottom: 15px;">Shazia is available for:</h2>
+                <h3 style="font-size: 13pt; font-weight: 900; margin-bottom: 15px; line-height: 1.2;">Shazia is available for:</h3>
                 <ul style="padding-left: 20px; list-style: disc;">
                     <li style="margin-bottom: 10px;">School teacher training programs</li>
                     <li style="margin-bottom: 10px;">Academic audits & mentoring</li>
-                    <li style="margin-bottom: 10px;">Leadership and capacity-building workshops</li>
-                    <li style="margin-bottom: 10px;">Corporate training programs</li>
+                    <li style="margin-bottom: 10px;">Leadership workshops</li>
+                    <li>Corporate training programs</li>
                 </ul>
             </div>
-
             <div style="margin-bottom: 40px;">
-                <h2 style="font-size: 14pt; font-weight: 900; margin-bottom: 15px;">She is passionate about:</h2>
+                <h3 style="font-size: 13pt; font-weight: 900; margin-bottom: 15px; line-height: 1.2;">She is passionate about:</h3>
                 <ul style="padding-left: 20px; list-style: disc;">
-                    <li style="margin-bottom: 10px;">Inclusive learning environments.</li>
+                    <li style="margin-bottom: 10px;">Engaging environments.</li>
                     <li style="margin-bottom: 10px;">Teacher mentorship</li>
-                    <li style="margin-bottom: 10px;">Parent-school relationships</li>
-                    <li style="margin-bottom: 10px;">Sustainable academic excellence</li>
+                    <li>Sustainable excellence</li>
                 </ul>
             </div>
-
-            <div>
-                <h2 style="font-size: 20pt; font-weight: 900; text-transform: uppercase;">Language</h2>
-                <hr style="border-top-color: #94a3b8;">
-                <p style="font-weight: 900; text-transform: uppercase; margin-top: 15px;">English</p>
-                <p style="font-weight: 900; text-transform: uppercase;">Hindi</p>
-                <p style="font-weight: 900; text-transform: uppercase;">Urdu</p>
+            <div style="margin-top: auto;">
+                <h2 style="font-size: 24pt; font-weight: 800;">Language</h2>
+                <hr style="border-top-color: #94a3b8; margin: 10px 0 15px 0;">
+                <p style="font-weight: 800; text-transform: uppercase;">English / Hindi / Urdu</p>
             </div>
         </aside>
-
-        <!-- Main -->
         <main class="main-content">
             <div class="timeline-line"></div>
-
             <h1>Shazia Sirdeshmukh</h1>
             <p class="subhead">Education & Training Specialist | Child Psychology | Academic Leadership</p>
             <hr>
-
-            <div style="position: relative; padding-left: 30px; margin-bottom: 50px;">
+            <div style="position: relative; padding-left: 35px; margin-bottom: 50px;">
                 <div class="node" style="top: 8px;"></div>
                 <h2 class="section-title">About</h2>
-                <p style="text-align: justify;">
-                    Shazia Sirdeshmukh is a seasoned education professional with over 25 years of experience in the field of early childhood and school education, specializing in teacher training, academic leadership, and holistic learning practices. She holds a Master's degree in Child Psychology, enabling her to design learning frameworks that are developmentally appropriate, impactful, and learner-centric.
-                </p>
+                <p style="text-align: justify;">Shazia Sirdeshmukh is a seasoned education professional with over 25 years of experience in the field of early childhood and school education, specializing in teacher training, academic leadership, and holistic learning practices. She holds a Master's degree in Child Psychology, enabling her to design learning frameworks that are developmentally appropriate, impactful, and learner-centric.</p>
             </div>
-
-            <div style="position: relative; padding-left: 30px; margin-bottom: 50px;">
+            <div style="position: relative; padding-left: 35px; margin-bottom: 50px;">
                 <div class="node" style="top: 8px;"></div>
                 <h2 class="section-title">Professional Expertise</h2>
-                
-                <p class="expertise-title">Teacher Training & Capacity Building</p>
-                <p class="expertise-desc">Designing and delivering impactful training programs for educators.</p>
-
-                <p class="expertise-title">Classroom Observation & Feedback</p>
-                <p class="expertise-desc">Providing constructive observations and mentoring to support development.</p>
-
-                <p class="expertise-title">Curriculum & Pedagogy Design</p>
-                <p class="expertise-desc">Developing innovative, age-appropriate curricula aligned with modern needs.</p>
-
-                <p class="expertise-title">Student Learning Outcome Improvement</p>
-                <p class="expertise-desc">Implementing strategies focused on academic excellence and engagement.</p>
-
-                <p class="expertise-title">Academic Leadership & School Engagement</p>
-                <p class="expertise-desc">Supporting school leadership teams in planning and growth.</p>
+                <div class="expertise-title">Teacher Training & Capacity Building</div>
+                <div class="expertise-desc">Designing and delivering impactful training programs for educators to enhance teaching effectiveness and classroom practices.</div>
+                <div class="expertise-title">Classroom Observation & Feedback</div>
+                <div class="expertise-desc">Providing constructive observations, performance feedback, and mentoring to support continuous teacher development.</div>
+                <div class="expertise-title">Curriculum & Pedagogy Design</div>
+                <div class="expertise-desc">Developing innovative, age-appropriate curricula aligned with modern pedagogies and learner needs.</div>
+                <div class="expertise-title">Academic Leadership & School Engagement</div>
+                <div class="expertise-desc">Supporting school leadership teams in academic planning, quality enhancement, and institutional growth.</div>
             </div>
-
-            <div style="position: relative; padding-left: 30px;">
+            <div style="position: relative; padding-left: 35px;">
                 <div class="node" style="top: 8px;"></div>
                 <h2 class="section-title">Approach & Philosophy</h2>
-                <p style="text-align: justify;">
-                    With over two decades of hands-on experience, Shazia specializes in blending modern global pedagogies such as the Reggio Emilia approach with India's rich Vedic education principles.
-                </p>
+                <p style="text-align: justify;">With over two decades of hands-on experience, Shazia specializes in blending modern global pedagogies such as the Reggio Emilia approach with India's rich Vedic education principles.</p>
             </div>
         </main>
     </div>
